@@ -169,7 +169,8 @@ main:focus { outline: none; }
 .chev { flex: none; transition: transform 200ms var(--ease); }
 .nav-group[open] > summary .chev { transform: rotate(180deg); }
 .site-nav a[aria-current="page"],
-.nav-group:has(a[aria-current="page"]) > summary {
+.nav-group:has(a[aria-current="page"]) > summary,
+.nav-group > summary[aria-current="page"] {
   text-decoration: underline 2px var(--accent);
   text-underline-offset: 10px;
 }

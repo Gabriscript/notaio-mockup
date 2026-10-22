@@ -1,0 +1,96 @@
+/* Internal info pages: i-notai, orari-ufficio, contatti, documenti.
+   Loaded after css/style.css; reuses its tokens and components (.sedi-grid, .sede, .doc-list). */
+
+/* ---------- I Notai ---------- */
+.notai-page { padding-bottom: var(--section); }
+.notai-photo { max-width: 1026px; }
+.notai-rows { margin-top: clamp(2rem, 5vw, 3.5rem); }
+.notai-rows li { padding-block: 20px 12px; border-top: 1px solid var(--rule); }
+.notai-rows li:last-child { border-bottom: 1px solid var(--rule); }
+.notai-rows h2 { font-size: clamp(1.6875rem, 1.3rem + 1.4vw, 2.125rem); line-height: 1.2; }
+.notai-rows .since { margin-top: 4px; color: var(--ink-2); }
+.notai-rows .mail a { display: inline-block; padding-block: 10px; overflow-wrap: anywhere; }
+@media (min-width: 900px) {
+  .notai-rows li {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: baseline;
+    padding-block: 24px;
+  }
+  .notai-rows h2 { grid-column: 1 / span 5; }
+  .notai-rows .since { grid-column: 6 / span 3; margin: 0; }
+  .notai-rows .mail { grid-column: 9 / span 4; }
+  .notai-rows .mail a { padding-block: 0; }
+}
+
+/* ---------- Shared: sede blocks with an H2 name (orari) ---------- */
+.sede h2 { font-size: 1.6875rem; line-height: 1.2; margin-bottom: 8px; }
+@media (min-width: 900px) {
+  .sede h2 { padding-block: 0 16px; border-top: 0; }
+}
+
+/* ---------- Orari Ufficio ---------- */
+.orari-page { padding-bottom: var(--section); }
+.orari-page .slot { font-family: var(--serif); font-size: 1.3125rem; font-variant-numeric: tabular-nums; }
+.orari-note { margin-top: 32px; color: var(--ink-2); }
+.orari-note a { color: var(--ink); white-space: nowrap; }
+
+/* ---------- Contatti ---------- */
+.contatti-page { padding-bottom: var(--section-s); }
+.contatti-page > h2,
+.come-page > h2 { margin-bottom: clamp(2rem, 4vw, 3rem); }
+.sede-mail { padding-block: 4px; }
+.sede-mail a { display: inline-block; padding-block: 6px; overflow-wrap: anywhere; }
+@media (min-width: 900px) {
+  .contatti-page .sedi-grid { grid-template-rows: repeat(6, auto); }
+  .contatti-page .sede { grid-row: span 6; }
+}
+
+.come-page { padding-bottom: var(--section); }
+.come-row { padding-block: 24px; border-top: 1px solid var(--rule); }
+.come-row:last-child { border-bottom: 1px solid var(--rule); }
+.come-row h3 { font-size: 1.6875rem; line-height: 1.2; margin-bottom: 12px; }
+.come-row dl { margin: 0; }
+.come-row dt { font-weight: 600; }
+.come-row dd { margin: 0 0 12px; max-width: 65ch; }
+.come-row dd:last-child { margin-bottom: 0; }
+/* Missing data, to be supplied by the client */
+.todo {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 1px dashed var(--ink-2);
+  border-radius: 2px;
+}
+@media (min-width: 900px) {
+  .come-row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: baseline;
+  }
+  .come-row h3 { grid-column: 1 / span 4; margin: 0; }
+  .come-row > :not(h3) { grid-column: 5 / span 8; }
+}
+
+/* ---------- Documenti ---------- */
+.docs-page { padding-bottom: var(--section); }
+.docs-intro { margin-bottom: clamp(2rem, 4vw, 3rem); }
+.docs-intro p { margin-top: 16px; color: var(--ink-2); }
+@media (min-width: 900px) {
+  .docs-page {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: start;
+  }
+  .docs-intro { grid-column: 1 / span 5; margin: 0; }
+  /* One column here, unlike the two-column list on the home page */
+  .docs-page .doc-list {
+    grid-column: 7 / span 6;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+  .docs-page .doc-list li:nth-child(5) a { border-bottom: 0; }
+}

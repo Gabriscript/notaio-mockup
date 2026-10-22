@@ -1,0 +1,193 @@
+/* Pages: attivita-studio, richiesta-copia-atti, richiesta-preventivo.
+   Loaded after css/style.css; uses its tokens only. */
+
+[hidden] { display: none !important; }
+
+/* =====================================================================
+   Attivita studio: index + 7 sections
+   ===================================================================== */
+.act { display: grid; grid-template-columns: minmax(0, 1fr); padding-bottom: var(--section); }
+
+/* Index: horizontal strip on mobile, sticky column on desktop */
+.act-toc ul {
+  list-style: none;
+  display: flex;
+  gap: 4px 24px;
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  border-block: 1px solid var(--rule);
+  scrollbar-width: none;
+}
+.act-toc ul::-webkit-scrollbar { display: none; }
+.act-toc li { flex: none; scroll-snap-align: start; }
+.act-toc a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.act-toc a[aria-current] {
+  text-decoration: underline 2px var(--accent);
+  text-underline-offset: 10px;
+}
+
+.act-sec { padding-block: 40px; border-top: 1px solid var(--rule); }
+.act-sec:first-child { border-top: 0; }
+.act-sec p { margin-top: 20px; }
+.act-list { margin-top: 24px; }
+.act-list li { padding-block: 10px; border-top: 1px solid var(--rule); }
+.act-list li:last-child { border-bottom: 1px solid var(--rule); }
+
+@media (min-width: 700px) {
+  .act-list { columns: 2; column-gap: 32px; }
+  .act-list li { break-inside: avoid; }
+  /* a rule on every row's bottom keeps both columns closed */
+  .act-list li { border-top: 0; border-bottom: 1px solid var(--rule); }
+  .act-list { border-top: 1px solid var(--rule); }
+}
+
+@media (min-width: 900px) {
+  .act { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 32px; align-items: start; }
+  .act-toc {
+    grid-column: 1 / span 3;
+    position: sticky;
+    top: calc(var(--hh) + 1px + 32px);
+    padding-top: 40px;
+  }
+  .act-toc ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border-block: 0;
+  }
+  .act-toc li { border-top: 1px solid var(--rule); }
+  .act-toc li:last-child { border-bottom: 1px solid var(--rule); }
+  .act-toc a { min-height: 44px; white-space: normal; }
+  .act-toc a[aria-current] { text-decoration: none; color: var(--accent); }
+  .act-body { grid-column: 4 / span 9; }
+  .act-sec { padding-block: 40px 56px; }
+}
+
+/* =====================================================================
+   Simulated forms (shared)
+   ===================================================================== */
+.form { display: grid; gap: 24px; }
+.field { display: grid; gap: 8px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.field > label, .field > legend { padding: 0; font-weight: 600; }
+.req { font-weight: 400; color: var(--ink-2); }
+.hint { font-size: 0.9375rem; color: var(--ink-2); }
+.field-err { font-size: 0.9375rem; font-weight: 600; color: var(--accent); }
+.field-err:empty { display: none; }
+
+.field input:not([type="checkbox"], [type="radio"]),
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--ink-2);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+.field textarea { min-height: 9rem; resize: vertical; }
+.field input.short { width: 8rem; }
+.field [aria-invalid="true"] { border-color: var(--accent); border-width: 2px; padding: 9px 13px; }
+
+/* Checkbox and radio rows: native control, 44px hit area */
+.field > .check, .check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: 10px;
+  font-weight: 400;
+}
+.check input { flex: none; width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--accent); }
+.consent a { font-weight: 600; }
+
+.form-actions { display: flex; flex-wrap: wrap; gap: 16px; padding-top: 8px; }
+.form-done p { font: 500 1.3125rem/1.35 var(--serif); max-width: 32ch; }
+.form-done p:focus { outline: none; }
+.form-done .btn { margin-top: 24px; }
+.btn-line { background: none; font-family: var(--sans); cursor: pointer; }
+button.btn { cursor: pointer; border: 0; }
+button.btn-line { border: 1px solid var(--ink-2); }
+.noscript-note { padding: 16px; border: 1px dashed var(--ink-2); border-radius: 2px; }
+
+/* =====================================================================
+   Richiesta copia atti
+   ===================================================================== */
+.copia { display: grid; row-gap: 48px; padding-bottom: var(--section); }
+.copia-text p + p { margin-top: 16px; }
+.copia-text figure { margin-top: 32px; max-width: 580px; }
+.copia-form > h2 { margin-bottom: 24px; }
+@media (min-width: 900px) {
+  .copia { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 32px; align-items: start; }
+  .copia-text { grid-column: 1 / span 5; }
+  .copia-form { grid-column: 7 / span 6; }
+}
+
+/* =====================================================================
+   Richiesta preventivo
+   ===================================================================== */
+.prev { padding-bottom: var(--section); }
+.prev-in { max-width: 46rem; }
+
+/* Mode choice: radios that look like toggle buttons */
+.mode { display: grid; gap: 12px; margin: 0 0 48px; padding: 0; border: 0; }
+.mode legend { padding: 0; margin-bottom: 12px; font-weight: 600; }
+.mode-opt {
+  align-content: start;
+  position: relative;
+  display: grid;
+  gap: 4px;
+  padding: 16px 20px;
+  border: 1px solid var(--ink-2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mode-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.mode-name { font: 500 1.3125rem/1.25 var(--serif); }
+.mode-desc { font-size: 0.9375rem; color: var(--ink-2); }
+.mode-opt:hover { border-color: var(--accent); }
+.mode-opt:has(input:checked) { border: 2px solid var(--ink); padding: 15px 19px; background: var(--paper-2); }
+.mode-opt:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (min-width: 600px) {
+  .mode { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+  .mode legend { grid-column: 1 / -1; }
+}
+/* Panels switch with CSS only, so it also works without JS */
+.prev:has(#mode-guidata:checked) #panel-libero,
+.prev:has(#mode-libero:checked) #panel-guidata { display: none; }
+.mode-panel > h2 { margin-bottom: 24px; }
+
+.todo {
+  margin-bottom: 32px;
+  padding: 16px;
+  border: 1px dashed var(--ink-2);
+  border-radius: 2px;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+}
+
+/* Guided steps: all visible without JS, one at a time with JS (js/forms.js) */
+.wiz-status { font-weight: 600; color: var(--ink-2); }
+html:not(.js) .wiz-status,
+html:not(.js) .wiz-nav-step { display: none; }
+.wiz-step { display: grid; gap: 24px; }
+.wiz-step + .wiz-step { padding-top: 24px; border-top: 1px solid var(--rule); }
+.js .wiz-step + .wiz-step { padding-top: 0; border-top: 0; }
+.wiz-step h3:focus, .wiz-summary h3:focus { outline: none; }
+.types { display: grid; }
+@media (min-width: 600px) { .types { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; } }
+.wiz-summary dl { margin: 16px 0 0; border-top: 1px solid var(--rule); }
+.wiz-summary dl > div { display: grid; gap: 2px 24px; padding-block: 12px; border-bottom: 1px solid var(--rule); }
+.wiz-summary dt { font-size: 0.9375rem; color: var(--ink-2); }
+.wiz-summary dd { margin: 0; overflow-wrap: anywhere; white-space: pre-line; }
+@media (min-width: 600px) { .wiz-summary dl > div { grid-template-columns: 12rem minmax(0, 1fr); } }

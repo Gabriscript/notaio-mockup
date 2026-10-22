@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Richiesta preventivo | Studio Notarile Napolitano &amp; Caricato</title>
+<meta name="description" content="Richiedi un preventivo allo Studio Notarile Napolitano &amp; Caricato con testo libero o con la procedura guidata. Sedi a Milano, Melegnano e Romano di Lombardia.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f9f6f4">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richiesta preventivo | Studio Notarile Napolitano &amp; Caricato">
+<meta property="og:description" content="Richiedi un preventivo allo Studio Notarile Napolitano &amp; Caricato con testo libero o con la procedura guidata. Sedi a Milano, Melegnano e Romano di Lombardia.">
+<link rel="icon" href="data:,">
+<link rel="preload" href="assets/fonts/literata-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/site.js" defer></script>
+<script src="js/forms.js" defer></script>
+</head>
+<body class="no-bar">
+
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html"><img src="assets/logo/logo-napolitano-caricato.png" width="339" height="112" alt="Studio Notarile Napolitano &amp; Caricato"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Principale">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <details class="nav-group">
+            <summary>Lo studio <svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+            <ul>
+              <li><a href="i-notai.html">I Notai</a></li>
+              <li><a href="orari-ufficio.html">Orari Ufficio</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="nav-group">
+            <summary>Servizi <svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+            <ul>
+              <li><a href="richiesta-copia-atti.html">Richiesta Copia atti</a></li>
+              <li><a href="richiesta-preventivo.html" aria-current="page">Richiesta Preventivo</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="nav-group">
+            <summary>Attività studio <svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+            <ul>
+              <li><a href="attivita-studio.html#consulenza">Consulenza</a></li>
+              <li><a href="attivita-studio.html#immobiliare">Immobiliare</a></li>
+              <li><a href="attivita-studio.html#famiglia">Famiglia</a></li>
+              <li><a href="attivita-studio.html#successioni">Successioni</a></li>
+              <li><a href="attivita-studio.html#volontaria-giurisdizione">Volontaria Giurisdizione</a></li>
+              <li><a href="attivita-studio.html#societa">Società</a></li>
+              <li><a href="attivita-studio.html#varie">Varie</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="documenti.html">Documenti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <div class="wrap page-head">
+    <nav class="crumbs" aria-label="Percorso">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span>Servizi<span aria-hidden="true">/</span><span aria-current="page">Richiesta Preventivo</span>
+    </nav>
+    <h1>Richiedi un preventivo</h1>
+    <p class="lead">Puoi scrivere la richiesta a testo libero oppure seguire la procedura guidata in tre passi.</p>
+  </div>
+
+  <div class="wrap prev">
+    <div class="prev-in">
+      <fieldset class="mode">
+        <legend>Come preferisci fare la richiesta?</legend>
+        <label class="mode-opt" for="mode-libero">
+          <input type="radio" name="mode" id="mode-libero" value="libero" checked>
+          <span class="mode-name">Testo libero</span>
+          <span class="mode-desc">Compili i campi richiesti e scrivi la richiesta a testo libero.</span>
+        </label>
+        <label class="mode-opt" for="mode-guidata">
+          <input type="radio" name="mode" id="mode-guidata" value="guidata">
+          <span class="mode-name">Procedura guidata</span>
+          <span class="mode-desc">Tre passi: tipo di atto, sede e note, contatti.</span>
+        </label>
+      </fieldset>
+
+      <noscript><p class="noscript-note">Questa è un'anteprima: i moduli si possono compilare ma non inviano alcun dato.</p></noscript>
+
+      <!-- Free text -->
+      <section class="mode-panel" id="panel-libero" aria-labelledby="libero-title">
+        <h2 id="libero-title">Richiesta con testo libero</h2>
+        <form class="form sim" method="post" aria-labelledby="libero-title">
+          <div class="field">
+            <label for="l-nome">Nome e cognome <span class="req">(obbligatorio)</span></label>
+            <input id="l-nome" name="nome" type="text" autocomplete="name" required aria-describedby="l-nome-err">
+            <p class="field-err" id="l-nome-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="l-email">Email <span class="req">(obbligatorio)</span></label>
+            <input id="l-email" name="email" type="email" autocomplete="email" required aria-describedby="l-email-err">
+            <p class="field-err" id="l-email-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="l-tel">Telefono</label>
+            <input id="l-tel" name="telefono" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="l-sede">Sede</label>
+            <select id="l-sede" name="sede">
+              <option value="">Scegli una sede</option>
+              <option>Milano</option>
+              <option>Melegnano</option>
+              <option>Romano di Lombardia</option>
+              <option>Non so</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="l-testo">Descrizione della richiesta <span class="req">(obbligatorio)</span></label>
+            <textarea id="l-testo" name="richiesta" rows="6" required aria-describedby="l-testo-err"></textarea>
+            <p class="field-err" id="l-testo-err" aria-live="polite"></p>
+          </div>
+          <div class="field consent">
+            <label class="check" for="l-privacy">
+              <input id="l-privacy" name="privacy" type="checkbox" required aria-describedby="l-privacy-err">
+              <span>Ho letto l'<a href="https://www.notaionapolitano.it/informativa-sulla-privacy/38" target="_blank" rel="noopener">informativa sulla privacy<span class="vh"> (si apre in una nuova scheda)</span></a> e acconsento al trattamento dei dati <span class="req">(obbligatorio)</span></span>
+            </label>
+            <p class="field-err" id="l-privacy-err" aria-live="polite"></p>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Richiedi un preventivo</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Guided: three steps, then a summary (js/forms.js). Without JS all steps are shown. -->
+      <section class="mode-panel" id="panel-guidata" aria-labelledby="guidata-title">
+        <h2 id="guidata-title">Procedura guidata</h2>
+        <p class="todo">[PROCEDURA GUIDATA: da collegare al sistema attuale dello studio]</p>
+        <form class="form sim wizard" method="post" aria-labelledby="guidata-title">
+          <p class="wiz-status" aria-live="polite"></p>
+
+          <div class="wiz-step">
+            <h3 tabindex="-1">Tipo di atto</h3>
+            <fieldset class="field" aria-describedby="g-tipo-err">
+              <legend>Che atto ti serve? <span class="req">(obbligatorio)</span></legend>
+              <div class="types">
+                <label class="check"><input type="radio" name="tipo" value="Compravendita immobiliare" required data-sum="Tipo di atto">Compravendita immobiliare</label>
+                <label class="check"><input type="radio" name="tipo" value="Mutuo" data-sum="Tipo di atto">Mutuo</label>
+                <label class="check"><input type="radio" name="tipo" value="Donazione" data-sum="Tipo di atto">Donazione</label>
+                <label class="check"><input type="radio" name="tipo" value="Successione" data-sum="Tipo di atto">Successione</label>
+                <label class="check"><input type="radio" name="tipo" value="Costituzione di società" data-sum="Tipo di atto">Costituzione di società</label>
+                <label class="check"><input type="radio" name="tipo" value="Cessione di quote o azioni" data-sum="Tipo di atto">Cessione di quote o azioni</label>
+                <label class="check"><input type="radio" name="tipo" value="Cessione di azienda" data-sum="Tipo di atto">Cessione di azienda</label>
+                <label class="check"><input type="radio" name="tipo" value="Separazione dei beni" data-sum="Tipo di atto">Separazione dei beni</label>
+                <label class="check"><input type="radio" name="tipo" value="Fondo patrimoniale" data-sum="Tipo di atto">Fondo patrimoniale</label>
+                <label class="check"><input type="radio" name="tipo" value="Procura" data-sum="Tipo di atto">Procura</label>
+                <label class="check"><input type="radio" name="tipo" value="Altro" data-sum="Tipo di atto">Altro</label>
+              </div>
+              <p class="field-err" id="g-tipo-err" aria-live="polite"></p>
+            </fieldset>
+          </div>
+
+          <div class="wiz-step">
+            <h3 tabindex="-1">Sede e note</h3>
+            <div class="field">
+              <label for="g-sede">Sede</label>
+              <select id="g-sede" name="sede" data-sum="Sede">
+                <option value="">Scegli una sede</option>
+                <option>Milano</option>
+                <option>Melegnano</option>
+                <option>Romano di Lombardia</option>
+                <option>Non so</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="g-note">Note</label>
+              <p class="hint" id="g-note-hint">Ad esempio: immobile, parti coinvolte, tempi previsti.</p>
+              <textarea id="g-note" name="note" rows="5" aria-describedby="g-note-hint" data-sum="Note"></textarea>
+            </div>
+          </div>
+
+          <div class="wiz-step">
+            <h3 tabindex="-1">Contatti e consenso</h3>
+            <div class="field">
+              <label for="g-nome">Nome e cognome <span class="req">(obbligatorio)</span></label>
+              <input id="g-nome" name="nome" type="text" autocomplete="name" required aria-describedby="g-nome-err" data-sum="Nome e cognome">
+              <p class="field-err" id="g-nome-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="g-email">Email <span class="req">(obbligatorio)</span></label>
+              <input id="g-email" name="email" type="email" autocomplete="email" required aria-describedby="g-email-err" data-sum="Email">
+              <p class="field-err" id="g-email-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="g-tel">Telefono</label>
+              <input id="g-tel" name="telefono" type="tel" autocomplete="tel" data-sum="Telefono">
+            </div>
+            <div class="field consent">
+              <label class="check" for="g-privacy">
+                <input id="g-privacy" name="privacy" type="checkbox" required aria-describedby="g-privacy-err">
+                <span>Ho letto l'<a href="https://www.notaionapolitano.it/informativa-sulla-privacy/38" target="_blank" rel="noopener">informativa sulla privacy<span class="vh"> (si apre in una nuova scheda)</span></a> e acconsento al trattamento dei dati <span class="req">(obbligatorio)</span></span>
+              </label>
+              <p class="field-err" id="g-privacy-err" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="wiz-summary" hidden>
+            <h3 tabindex="-1">Riepilogo</h3>
+            <p class="hint">Controlla i dati. Per correggerli torna indietro.</p>
+            <dl></dl>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-line wiz-nav-step" type="button" data-prev>Indietro</button>
+            <button class="btn btn-primary wiz-nav-step" type="button" data-next>Avanti</button>
+            <button class="btn btn-primary" type="submit">Richiedi un preventivo</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <img src="assets/logo/logo-napolitano-caricato.png" width="339" height="112" alt="" loading="lazy" decoding="async">
+      <p>Studio Notarile Napolitano &amp; Caricato<br>P.IVA 08707430966</p>
+    </div>
+    <div class="f-sedi">
+      <div>
+        <p class="f-title">Milano</p>
+        <p>Via Giovanni Boccaccio, 47<br>20123 Milano (MI)</p>
+        <p>Tel. <a href="tel:+390276002588">02 7600 2588</a></p>
+      </div>
+      <div>
+        <p class="f-title">Melegnano</p>
+        <p>Via Marsala, 3<br>20077 Melegnano (MI)</p>
+        <p>Tel. <a href="tel:+39029837529">02 9837529</a></p>
+      </div>
+      <div>
+        <p class="f-title">Romano di Lombardia</p>
+        <p>Via Guglielmo Marconi, 31<br>24058 Romano di Lombardia&nbsp;(BG)</p>
+        <p>Tel. <a href="tel:+39029837529">02 9837529</a></p>
+      </div>
+      <p class="f-hours">Tutte le sedi: dal lunedì al venerdì, 9:00-13:00 e 14:30-18:30</p>
+    </div>
+    <ul class="f-legal">
+      <li><a href="https://www.notaionapolitano.it/sitemap/33" target="_blank" rel="noopener">Sitemap<span class="vh"> (si apre in una nuova scheda)</span></a></li>
+      <li><a href="https://www.notaionapolitano.it/informativa-sulla-privacy/38" target="_blank" rel="noopener">Privacy<span class="vh"> (si apre in una nuova scheda)</span></a></li>
+      <li><a href="https://www.notaionapolitano.it/cookie-policy/59" target="_blank" rel="noopener">Cookie Policy<span class="vh"> (si apre in una nuova scheda)</span></a></li>
+    </ul>
+  </div>
+  <div class="wrap f-bottom">
+    <p>© 2026 Studio Notarile Napolitano Caricato</p>
+    <p>Anteprima grafica realizzata da MadHat Works. Contenuti dal sito attuale.</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-line" href="tel:+390276002588">Chiama Milano</a>
+  <a class="btn btn-primary" href="richiesta-preventivo.html">Richiedi un preventivo</a>
+</div>
+
+</body>
+</html>
