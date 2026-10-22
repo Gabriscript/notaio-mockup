@@ -12,6 +12,7 @@
 - assets/img/ — WebP esportati dalle foto (T1)
 - assets/fonts/ — woff2 Literata e Hanken Grotesk auto-ospitati (T1)
 - assets/logo/ — logo originale (T1)
+- assets/README.md — origine, dimensioni, strumenti degli asset e licenze dei font (T1)
 - css/style.css — token, base, componenti condivisi, home (T2)
 - css/info.css — stili di i-notai, orari-ufficio, contatti, documenti (T3)
 - css/forms.css — stili di attivita-studio, richiesta-copia-atti, richiesta-preventivo (T4)
