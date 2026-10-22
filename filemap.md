@@ -1,0 +1,23 @@
+# filemap
+
+- CLAUDE.md — regole del progetto, comandi; leggere per primo
+- README.md — per il cliente/Gabriele: fonti, segnaposto, cose da chiedere (scritto a fine lavoro)
+- filemap.md — questo indice
+- check-site.sh — controlli automatici (T5)
+- docs/SPEC.md — design, pagine, componenti, definizione di fatto
+- docs/CONTENT.md — unica fonte dei contenuti verificati
+- docs/PLAN.md — task e briefing dei worker
+- docs/shell.html — frammento canonico header/nav/barra mobile/footer/fascia preventivo (T2); da copiare nelle pagine
+- _originali/ — foto e logo scaricati dal sito attuale, mai pubblicati
+- assets/img/ — WebP esportati dalle foto (T1)
+- assets/fonts/ — woff2 Literata e Hanken Grotesk auto-ospitati (T1)
+- assets/logo/ — logo originale (T1)
+- css/style.css — token, base, componenti condivisi, home (T2)
+- css/info.css — stili di i-notai, orari-ufficio, contatti, documenti (T3)
+- css/forms.css — stili di attivita-studio, richiesta-copia-atti, richiesta-preventivo (T4)
+- js/site.js — menu, tendine, momento firma hero (T2)
+- js/forms.js — moduli simulati e procedura guidata (T4)
+- index.html — home (T2)
+- i-notai.html, orari-ufficio.html, contatti.html, documenti.html — pagine informative (T3)
+- attivita-studio.html, richiesta-copia-atti.html, richiesta-preventivo.html — pagine con moduli o indice (T4)
+- backup/ — copie automatiche dell'hook, ignorate da git
