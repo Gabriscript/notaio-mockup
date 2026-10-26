@@ -6,10 +6,10 @@ Generated from `_originali/` (task T1). The originals are not published; `_origi
 
 | File | Source (`_originali/`) | Source px | Output px | Processing |
 |---|---|---|---|---|
-| img/cortile-1600.webp | IMG_0417_2.JPG | 3477x2956 | 1600x1360 | resize (cover), WebP q80 |
-| img/cortile-900.webp | IMG_0417_2.JPG | 3477x2956 | 900x765 | resize (cover), WebP q80 |
-| img/sala-riunioni.webp | foto_home_napolitanoUP1.jpg | 1026x450 | 1026x450 | native size, WebP q80 |
-| img/repertori.webp | 13.jpg | 580x300 | 580x300 | native size, WebP q80 |
+| img/interno-1600.webp | interno.jpg | 2048x2048 | 1600x1600 | resize, WebP q68 |
+| img/interno-900.webp | interno.jpg | 2048x2048 | 900x900 | resize, WebP q68 |
+| img/sala-riunioni.webp | foto_home_napolitanoUP1.jpg | 1026x450 | 1026x450 | native size, WebP q68 |
+| img/repertori.webp | 13.jpg | 580x300 | 580x300 | native size, WebP q68 |
 | logo/logo-napolitano-caricato.png | logo_napolitano.png | 339x112 | 339x112 | byte-for-byte copy |
 
 Tool: Node 24 + `sharp` 0.35.5 (libvips 8.18.7), installed in a temporary folder outside the project.
